@@ -1,0 +1,106 @@
+<div class="row align-items-center">
+
+    <div class="col"></div>
+
+    <div class="col d-flex justify-content-center">
+        <img th:src="@{images/06927e8e3ef843bc9802a443aa3dfd51.png}" alt="logo">
+    </div>
+
+    <div class="col d-flex justify-content-center align-items-center">
+
+        <form action="#">
+            <div class="activeUser">
+
+                <div class="">
+                    <p class="lead centering m-0 mt-3">Active profile:
+                        <h3>
+                             <a href="/my-profile" class="centering" style="text-decoration: none">
+                                <th:block th:if="${#request.getRemoteUser()!=null}" th:text="${#request.getRemoteUser()}"></th:block>
+                             </a>
+                        </h3>
+                        <a href="/shopping-cart" class="centering">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart btn-outline-success" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="row" th:if="${#request.getRemoteUser()!=null}">
+                    <th:block><a href="/logout" class="btn btn-outline-danger">Log Out</a></th:block>
+                </div>
+
+                <div class="centering mt-2">
+
+<!--                    <div class="row mb-1">-->
+<!--                        <div class="centering">-->
+<!--                            <div class="col d-flex justify-content-end">-->
+<!--                                <form class="d-flex justify-content-center" th:action="@{/products/search}" th:method="GET">-->
+<!--                                    <input name="search" type="text" class="mb-2 m-1" placeholder="Search products..."/>-->
+<!--                                    <button class="btn btn-outline-success m-1 mb-2" type="submit">Пребарај</button>-->
+<!--                                </form>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+<!--                    <a href="/shopping-cart" class="btn btn-success ">Shopping Cart</a>-->
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<div class="row">
+    <hr>
+</div>
+<div class="row d-flex justify-content-center ">
+    <div>
+        <div class="centering nav">
+
+<!--            za site class = "btn btn-outline-success"-->
+            <div class="col d-flex justify-content-center">
+                <a href="/home" style="color: black">Дома</a>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <a href="/products" style="color: black">Продукти</a>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <a href="/categories" style="color: black">Категории</a>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <a href="/manufacturers" style="color: black">Производители</a>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <a href="/countries" style="color: black">Земји</a>
+            </div>
+
+            <th:block sec:authorize="hasRole('ROLE_ADMIN')">
+                <div class="col d-flex justify-content-center">
+                    <a href="/reviews" style="color: black">Искуства</a>
+                </div>
+            </th:block>
+
+            <div class="ver"></div>
+            <div>
+                <form class="d-flex justify-content-center" th:action="@{/products/search}" th:method="GET">
+                    <input name="search" type="text" class="" style="margin-right: 0.15vw" id="search" placeholder="Search products..."/>
+                    <button class="btn btn-success" type="submit">Пребарај</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="centering">
+        <div class="col d-flex justify-content-center">
+
+        </div>
+    </div>
+</div>
+<br>
+

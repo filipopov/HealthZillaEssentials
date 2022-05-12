@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .round{
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="row md-4 round">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/images/tamanna-rumee-JxTfREGS5LE-unsplash.jpg" class="d-block w-100" alt="..."
+                         th:src="@{images/tamanna-rumee-JxTfREGS5LE-unsplash.jpg}">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/pass-the-honey-_Tt2HSV6lgY-unsplash.jpg" class="d-block w-100" alt="..."
+                         th:src="@{images/pass-the-honey-_Tt2HSV6lgY-unsplash.jpg}">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/hoyoung-choi-QJII95HD_Lk-unsplash.jpg" class="d-block w-100" alt="..."
+                         th:src="@{images/hoyoung-choi-QJII95HD_Lk-unsplash.jpg}">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <p class="lead"><h5 class="display-5">Сите наши продукти се 100% природни!</h5></p>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
